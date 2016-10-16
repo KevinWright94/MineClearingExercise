@@ -153,12 +153,13 @@ list<Vessel::command> Vessel::readScript (string scriptFileName){
 			v++;
 		}
 		curCommand = parseString(commandStr);
-		if(curCommand < 4 && hasMoved == true) //if current command is a move command and the ship has already moved this line
-			cmdList.push_back(fall);
-		else if(curCommand >= 4 && hasFired == true)
-			cmdList.push_back(fall);
-
-		cmdList.push_back(curCommand);
+		if(curCommand != none){
+			if(curCommand < 4 && hasMoved == true) //if current command is a move command and the ship has already moved this line
+				cmdList.push_back(fall);
+			else if(curCommand >= 4 && hasFired == true)
+				cmdList.push_back(fall);
+			cmdList.push_back(curCommand);
+		}
 		cmdList.push_back(fall);
 		hasMoved = false;
 		hasFired = false;
@@ -197,7 +198,7 @@ Vessel::command Vessel::parseString(string curCommand){
 			return fall;
 		}
 		else{
-			cout <<"UNKNOWN COMMAND "<< curCommand << endl;
+			//cout <<"UNKNOWN COMMAND "<< curCommand << endl;
 			return none;
 		}
 }
