@@ -1,7 +1,8 @@
 #include"space.h"
 #include"vessel.h"
 
-void Space::initField(string fieldFileName){ //Initializes the location of the mines and the ship
+//Initializes the location of the mines and the ship
+void Space::initField(string fieldFileName){ 
 	coordinates fieldSize = parseField(fieldFileName);
 	shipLocation = findCenter(fieldSize.x, fieldSize.y);
 }
