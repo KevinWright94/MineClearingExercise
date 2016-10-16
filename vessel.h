@@ -1,8 +1,7 @@
 /*
- * vessel.h
- *
- *  Created on: Oct 14, 2016
- *      Author: Kevin Wright
+ *vessel.h
+ *Created on: Oct 14, 2016
+ *Author: Kevin Wright
  */
 
 #ifndef VESSEL_H_
@@ -10,6 +9,10 @@
 #include"space.h"
 #include<list>
 
+/*
+ * controls the movement and firing of the mine clearing vessel.
+ * also reads, converts, and runs the vessel's script
+ */
 class Vessel : public Space{
 public:
 	enum command{
