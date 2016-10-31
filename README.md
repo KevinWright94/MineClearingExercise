@@ -1,4 +1,4 @@
-# MineClearingexercise
+# MineClearingExercise
 created by: Kevin Wright
 
 Created in C++ using the g++ compiler. No additional libraries should be needed for compilation, so it should be able to compile on any c++ compiler. 
